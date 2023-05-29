@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sajjad-build</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;🕰&lt;/text&gt;&lt;/svg&gt;">
+
+    <style>/* ! tailwindcss v3.3.1 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::-webkit-backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.bottom-0{bottom:0px}.left-0{left:0px}.right-0{right:0px}.top-0{top:0px}.left-1\/2{left:50%}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.z-30{z-index:30}.z-0{z-index:0}.order-first{order:-9999}.order-last{order:9999}.col-span-2{grid-column:span 2 / span 2}.col-span-1{grid-column:span 1 / span 1}.m-0{margin:0px}.m-5{margin:1.25rem}.mx-auto{margin-left:auto;margin-right:auto}.my-8{margin-top:2rem;margin-bottom:2rem}.-mx-4{margin-left:-1rem;margin-right:-1rem}.mx-0{margin-left:0px;margin-right:0px}.my-6{margin-top:1.5rem;margin-bottom:1.5rem}.mx-1{margin-left:0.25rem;margin-right:0.25rem}.-mx-5{margin-left:-1.25rem;margin-right:-1.25rem}.-my-2{margin-top:-0.5rem;margin-bottom:-0.5rem}.-mt-0{margin-top:-0px}.-mt-0\.5{margin-top:-0.125rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-20{margin-bottom:5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-8{margin-bottom:2rem}.ml-auto{margin-left:auto}.mr-2{margin-right:0.5rem}.mr-3{margin-right:0.75rem}.mr-auto{margin-right:auto}.mt-1{margin-top:0.25rem}.mt-10{margin-top:2.5rem}.mt-24{margin-top:6rem}.mt-5{margin-top:1.25rem}.-ml-8{margin-left:-2rem}.-mb-1{margin-bottom:-0.25rem}.mt-2{margin-top:0.5rem}.mt-20{margin-top:5rem}.mt-6{margin-top:1.5rem}.-mt-20{margin-top:-5rem}.mb-5{margin-bottom:1.25rem}.ml-3{margin-left:0.75rem}.mt-4{margin-top:1rem}.mb-6{margin-bottom:1.5rem}.mt-0{margin-top:0px}.mt-8{margin-top:2rem}.mb-2{margin-bottom:0.5rem}.mr-1{margin-right:0.25rem}.mt-16{margin-top:4rem}.mt-3{margin-top:0.75rem}.ml-4{margin-left:1rem}.mb-7{margin-bottom:1.75rem}.mr-5{margin-right:1.25rem}.-mb-5{margin-bottom:-1.25rem}.mt-12{margin-top:3rem}.-mb-12{margin-bottom:-3rem}.-ml-4{margin-left:-1rem}.-mr-8{margin-right:-2rem}.-mt-8{margin-top:-2rem}.mt-auto{margin-top:auto}.-ml-10{margin-left:-2.5rem}.ml-1{margin-left:0.25rem}.mb-0{margin-bottom:0px}.ml-2{margin-left:0.5rem}.-mb-0{margin-bottom:-0px}.-mb-0\.5{margin-bottom:-0.125rem}.mb-2\.5{margin-bottom:0.625rem}.ml-2\.5{margin-left:0.625rem}.box-border{box-sizing:border-box}.box-content{box-sizing:content-box}.block{display:block}.inline-block{display:inline-block}.inline{display:inline}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-1{height:0.25rem}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-4{height:1rem}.h-6{height:1.5rem}.h-7{height:1.75rem}.h-8{height:2rem}.h-9{height:2.25rem}.h-full{height:100%}.h-auto{height:auto}.h-24{height:6rem}.h-screen{height:100vh}.h-12{height:3rem}.h-20{height:5rem}.h-3{height:0.75rem}.h-16{height:4rem}.h-32{height:8rem}.h-5{height:1.25rem}.h-px{height:1px}.h-56{height:14rem}.h-0{height:0px}.h-0\.5{height:0.125rem}.min-h-screen{min-height:100vh}.w-1\/2{width:50%}.w-10{width:2.5rem}.w-2\/5{width:40%}.w-4{width:1rem}.w-6{width:1.5rem}.w-auto{width:auto}.w-full{width:100%}.w-32{width:8rem}.w-64{width:16rem}.w-16{width:4rem}.w-screen{width:100vw}.w-11\/12{width:91.666667%}.w-3{width:0.75rem}.w-8{width:2rem}.w-3\/4{width:75%}.w-5{width:1.25rem}.w-80{width:20rem}.w-7{width:1.75rem}.w-24{width:6rem}.w-20{width:5rem}.w-0{width:0px}.w-1\/4{width:25%}.w-12{width:3rem}.max-w-7xl{max-width:80rem}.max-w-lg{max-width:32rem}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.max-w-3xl{max-width:48rem}.max-w-sm{max-width:24rem}.max-w-6xl{max-width:72rem}.max-w-md{max-width:28rem}.max-w-5xl{max-width:64rem}.max-w-xl{max-width:36rem}.max-w-screen-xl{max-width:1280px}.flex-1{flex:1 1 0%}.flex-initial{flex:0 1 auto}.flex-none{flex:none}.flex-shrink-0{flex-shrink:0}.flex-grow-0{flex-grow:0}.-translate-y-full{--tw-translate-y:-100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-40{--tw-translate-y:-10rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-x-1\/2{--tw-translate-x:50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-y-32{--tw-translate-y:8rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-x-0{--tw-translate-x:0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-4{--tw-translate-y:-1rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-0{--tw-translate-y:-0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-px{--tw-translate-y:-1px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-y-px{--tw-translate-y:1px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-2{--tw-translate-y:-0.5rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-x-full{--tw-translate-x:100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.rotate-0{--tw-rotate:0deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-rotate-180{--tw-rotate:-180deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.list-none{list-style-type:none}.grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-col-reverse{flex-direction:column-reverse}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-start{justify-content:flex-start}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-5{gap:1.25rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.gap-8{gap:2rem}.gap-16{gap:4rem}.gap-y-3{row-gap:0.75rem}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.space-x-1 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.25rem * var(--tw-space-x-reverse));margin-left:calc(0.25rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.375rem * var(--tw-space-x-reverse));margin-left:calc(0.375rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-10 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2.5rem * var(--tw-space-y-reverse))}.space-x-5 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.25rem * var(--tw-space-x-reverse));margin-left:calc(1.25rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-6 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem * var(--tw-space-x-reverse));margin-left:calc(1.5rem * calc(1 - var(--tw-space-x-reverse)))}.self-start{align-self:flex-start}.overflow-hidden{overflow:hidden}.overflow-visible{overflow:visible}.overflow-y-hidden{overflow-y:hidden}.rounded{border-radius:0.25rem}.rounded-md{border-radius:0.375rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-b-none{border-bottom-right-radius:0px;border-bottom-left-radius:0px}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-t-2{border-top-width:2px}.border-r{border-right-width:1px}.border-b-2{border-bottom-width:2px}.border-solid{border-style:solid}.border-gray-600{--tw-border-opacity:1;border-color:rgb(75 85 99 / var(--tw-border-opacity))}.border-gray-800{--tw-border-opacity:1;border-color:rgb(31 41 55 / var(--tw-border-opacity))}.border-gray-900{--tw-border-opacity:1;border-color:rgb(17 24 39 / var(--tw-border-opacity))}.border-blue-300{--tw-border-opacity:1;border-color:rgb(147 197 253 / var(--tw-border-opacity))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity))}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity))}.border-purple-500{--tw-border-opacity:1;border-color:rgb(168 85 247 / var(--tw-border-opacity))}.border-transparent{border-color:transparent}.border-slate-300\/20{border-color:rgb(203 213 225 / 0.2)}.border-slate-400\/20{border-color:rgb(148 163 184 / 0.2)}.border-white\/20{border-color:rgb(255 255 255 / 0.2)}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity))}.border-green-400{--tw-border-opacity:1;border-color:rgb(74 222 128 / var(--tw-border-opacity))}.border-red-500{--tw-border-opacity:1;border-color:rgb(239 68 68 / var(--tw-border-opacity))}.border-yellow-400{--tw-border-opacity:1;border-color:rgb(250 204 21 / var(--tw-border-opacity))}.border-black{--tw-border-opacity:1;border-color:rgb(0 0 0 / var(--tw-border-opacity))}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-transparent{background-color:transparent}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.bg-green-400{--tw-bg-opacity:1;background-color:rgb(74 222 128 / var(--tw-bg-opacity))}.bg-red-400{--tw-bg-opacity:1;background-color:rgb(248 113 113 / var(--tw-bg-opacity))}.bg-yellow-400{--tw-bg-opacity:1;background-color:rgb(250 204 21 / var(--tw-bg-opacity))}.bg-\[\#fffbfa\]{--tw-bg-opacity:1;background-color:rgb(255 251 250 / var(--tw-bg-opacity))}.bg-purple-900{--tw-bg-opacity:1;background-color:rgb(88 28 135 / var(--tw-bg-opacity))}.bg-purple-600{--tw-bg-opacity:1;background-color:rgb(147 51 234 / var(--tw-bg-opacity))}.bg-purple-700{--tw-bg-opacity:1;background-color:rgb(126 34 206 / var(--tw-bg-opacity))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity))}.bg-blue-200{--tw-bg-opacity:1;background-color:rgb(191 219 254 / var(--tw-bg-opacity))}.bg-slate-300\/20{background-color:rgb(203 213 225 / 0.2)}.bg-gray-700{--tw-bg-opacity:1;background-color:rgb(55 65 81 / var(--tw-bg-opacity))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity))}.bg-opacity-95{--tw-bg-opacity:0.95}.bg-opacity-60{--tw-bg-opacity:0.6}.bg-gradient-to-l{background-image:linear-gradient(to left, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.bg-none{background-image:none}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.bg-gradient-to-t{background-image:linear-gradient(to top, var(--tw-gradient-stops))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-tr{background-image:linear-gradient(to top right, var(--tw-gradient-stops))}.from-gray-900{--tw-gradient-from:#111827 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(17 24 39 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-pink-600{--tw-gradient-from:#db2777 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(219 39 119 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-blue-500{--tw-gradient-from:#3b82f6 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(59 130 246 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-white{--tw-gradient-from:#fff var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(255 255 255 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-blue-900{--tw-gradient-from:#1e3a8a var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(30 58 138 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-indigo-600{--tw-gradient-from:#4f46e5 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(79 70 229 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-blue-400{--tw-gradient-from:#60a5fa var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(96 165 250 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-purple-200{--tw-gradient-from:#e9d5ff var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(233 213 255 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-purple-400{--tw-gradient-from:#c084fc var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(192 132 252 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-purple-900{--tw-gradient-from:#581c87 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(88 28 135 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-\[\#102030\]{--tw-gradient-from:#102030 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(16 32 48 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-black{--tw-gradient-from:#000 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(0 0 0 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-blue-600{--tw-gradient-from:#2563eb var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(37 99 235 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-transparent{--tw-gradient-from:transparent var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(0 0 0 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-purple-500{--tw-gradient-from:#a855f7 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(168 85 247 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-blue-300{--tw-gradient-from:#93c5fd var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(147 197 253 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-green-400{--tw-gradient-from:#4ade80 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(74 222 128 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-blue-400{--tw-gradient-via-position: ;--tw-gradient-to:rgb(96 165 250 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #60a5fa var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-purple-500{--tw-gradient-via-position: ;--tw-gradient-to:rgb(168 85 247 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #a855f7 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-blue-700{--tw-gradient-via-position: ;--tw-gradient-to:rgb(29 78 216 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #1d4ed8 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-indigo-700{--tw-gradient-via-position: ;--tw-gradient-to:rgb(67 56 202 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #4338ca var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-indigo-800{--tw-gradient-via-position: ;--tw-gradient-to:rgb(55 48 163 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #3730a3 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-\[\#53acd0\]{--tw-gradient-via-position: ;--tw-gradient-to:rgb(83 172 208 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #53acd0 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-black{--tw-gradient-via-position: ;--tw-gradient-to:rgb(0 0 0 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #000 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-blue-500{--tw-gradient-via-position: ;--tw-gradient-to:rgb(59 130 246 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #3b82f6 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-pink-400{--tw-gradient-via-position: ;--tw-gradient-to:rgb(244 114 182 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #f472b6 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-purple-600{--tw-gradient-via-position: ;--tw-gradient-to:rgb(147 51 234 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #9333ea var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-slate-800{--tw-gradient-via-position: ;--tw-gradient-to:rgb(30 41 59 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #1e293b var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-teal-400{--tw-gradient-via-position: ;--tw-gradient-to:rgb(45 212 191 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #2dd4bf var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-indigo-600{--tw-gradient-via-position: ;--tw-gradient-to:rgb(79 70 229 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #4f46e5 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-transparent{--tw-gradient-via-position: ;--tw-gradient-to:rgb(0 0 0 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), transparent var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-blue-700{--tw-gradient-to:#1d4ed8 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-indigo-400{--tw-gradient-to:#818cf8 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-blue-400{--tw-gradient-to:#60a5fa var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-purple-600{--tw-gradient-to:#9333ea var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-green-400{--tw-gradient-to:#4ade80 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-green-700{--tw-gradient-to:#15803d var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-pink-100{--tw-gradient-to:#fce7f3 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-pink-400{--tw-gradient-to:#f472b6 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-pink-600{--tw-gradient-to:#db2777 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-\[\#102030\]{--tw-gradient-to:#102030 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-black{--tw-gradient-to:#000 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-purple-500{--tw-gradient-to:#a855f7 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-teal-400{--tw-gradient-to:#2dd4bf var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-blue-500{--tw-gradient-to:#3b82f6 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-blue-300{--tw-gradient-to:#93c5fd var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-white{--tw-gradient-to:#fff var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-gray-100{--tw-gradient-to:#f3f4f6 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-gray-900{--tw-gradient-to:#111827 var(--tw-gradient-to-position);--tw-gradient-to-position: }.bg-cover{background-size:cover}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.bg-center{background-position:center}.bg-no-repeat{background-repeat:no-repeat}.fill-current{fill:currentColor}.object-contain{object-fit:contain}.object-cover{object-fit:cover}.object-center{object-position:center}.p-8{padding:2rem}.p-1{padding:0.25rem}.p-10{padding:2.5rem}.p-0{padding:0px}.p-12{padding:3rem}.p-6{padding:1.5rem}.p-1\.5{padding:0.375rem}.p-2{padding:0.5rem}.px-12{padding-left:3rem;padding-right:3rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-20{padding-top:5rem;padding-bottom:5rem}.px-0{padding-left:0px;padding-right:0px}.py-0{padding-top:0px;padding-bottom:0px}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-7{padding-top:1.75rem;padding-bottom:1.75rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.px-14{padding-left:3.5rem;padding-right:3.5rem}.py-16{padding-top:4rem;padding-bottom:4rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-32{padding-top:8rem;padding-bottom:8rem}.pb-10{padding-bottom:2.5rem}.pb-2{padding-bottom:0.5rem}.pb-8{padding-bottom:2rem}.pl-0{padding-left:0px}.pl-2{padding-left:0.5rem}.pr-2{padding-right:0.5rem}.pt-10{padding-top:2.5rem}.pb-16{padding-bottom:4rem}.pb-5{padding-bottom:1.25rem}.pb-40{padding-bottom:10rem}.pt-20{padding-top:5rem}.pb-24{padding-bottom:6rem}.pl-3{padding-left:0.75rem}.pl-3\.5{padding-left:0.875rem}.pt-12{padding-top:3rem}.pt-5{padding-top:1.25rem}.pt-7{padding-top:1.75rem}.pl-16{padding-left:4rem}.pl-6{padding-left:1.5rem}.pr-12{padding-right:3rem}.pr-16{padding-right:4rem}.pr-6{padding-right:1.5rem}.pr-1{padding-right:0.25rem}.pb-28{padding-bottom:7rem}.pt-0{padding-top:0px}.pb-0{padding-bottom:0px}.pb-12{padding-bottom:3rem}.pr-5{padding-right:1.25rem}.pb-32{padding-bottom:8rem}.pl-10{padding-left:2.5rem}.pr-4{padding-right:1rem}.pb-20{padding-bottom:5rem}.pb-2\.5{padding-bottom:0.625rem}.pl-5{padding-left:1.25rem}.pb-6{padding-bottom:1.5rem}.text-left{text-align:left}.text-center{text-align:center}.align-top{vertical-align:top}.align-middle{vertical-align:middle}.font-sans{font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}.text-2xl{font-size:1.5rem;line-height:2rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-5xl{font-size:3rem;line-height:1}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-light{font-weight:300}.font-medium{font-weight:500}.font-semibold{font-weight:600}.font-extrabold{font-weight:800}.font-normal{font-weight:400}.uppercase{text-transform:uppercase}.normal-case{text-transform:none}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.leading-6{line-height:1.5rem}.leading-4{line-height:1rem}.leading-10{line-height:2.5rem}.leading-5{line-height:1.25rem}.leading-7{line-height:1.75rem}.tracking-wide{letter-spacing:0.025em}.tracking-tight{letter-spacing:-0.025em}.tracking-tighter{letter-spacing:-0.05em}.text-gray-100{--tw-text-opacity:1;color:rgb(243 244 246 / var(--tw-text-opacity))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity))}.text-transparent{color:transparent}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-blue-100{--tw-text-opacity:1;color:rgb(219 234 254 / var(--tw-text-opacity))}.text-blue-300{--tw-text-opacity:1;color:rgb(147 197 253 / var(--tw-text-opacity))}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity))}.text-gray-200{--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity))}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234 / var(--tw-text-opacity))}.text-purple-900{--tw-text-opacity:1;color:rgb(88 28 135 / var(--tw-text-opacity))}.text-indigo-100{--tw-text-opacity:1;color:rgb(224 231 255 / var(--tw-text-opacity))}.text-indigo-50{--tw-text-opacity:1;color:rgb(238 242 255 / var(--tw-text-opacity))}.text-indigo-900{--tw-text-opacity:1;color:rgb(49 46 129 / var(--tw-text-opacity))}.text-purple-300{--tw-text-opacity:1;color:rgb(216 180 254 / var(--tw-text-opacity))}.text-purple-100{--tw-text-opacity:1;color:rgb(243 232 255 / var(--tw-text-opacity))}.text-purple-200{--tw-text-opacity:1;color:rgb(233 213 255 / var(--tw-text-opacity))}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity))}.text-purple-500{--tw-text-opacity:1;color:rgb(168 85 247 / var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.no-underline{-webkit-text-decoration-line:none;text-decoration-line:none}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.placeholder-gray-400::placeholder{--tw-placeholder-opacity:1;color:rgb(156 163 175 / var(--tw-placeholder-opacity))}.placeholder-purple-300::placeholder{--tw-placeholder-opacity:1;color:rgb(216 180 254 / var(--tw-placeholder-opacity))}.caret-blue-600{caret-color:#2563eb}.opacity-100{opacity:1}.opacity-80{opacity:0.8}.opacity-50{opacity:0.5}.opacity-90{opacity:0.9}.opacity-75{opacity:0.75}.opacity-0{opacity:0}.opacity-25{opacity:0.25}.opacity-30{opacity:0.3}.opacity-60{opacity:0.6}.opacity-70{opacity:0.7}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.ring-indigo-300{--tw-ring-opacity:1;--tw-ring-color:rgb(165 180 252 / var(--tw-ring-opacity))}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-100{transition-duration:100ms}.duration-150{transition-duration:150ms}.duration-300{transition-duration:300ms}.duration-200{transition-duration:200ms}.duration-500{transition-duration:500ms}.ease-out{transition-timing-function:cubic-bezier(0, 0, 0.2, 1)}.ease-in{transition-timing-function:cubic-bezier(0.4, 0, 1, 1)}.ease-in-out{transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1)}.checked\:border-blue-600:checked{--tw-border-opacity:1;border-color:rgb(37 99 235 / var(--tw-border-opacity))}.checked\:bg-blue-600:checked{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity))}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-gray-300:hover{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity))}.hover\:border-white:hover{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity))}.hover\:border-white\/20:hover{border-color:rgb(255 255 255 / 0.2)}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity))}.hover\:bg-gray-800:hover{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity))}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.hover\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.hover\:bg-transparent:hover{background-color:transparent}.hover\:bg-gray-900:hover{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.hover\:bg-purple-700:hover{--tw-bg-opacity:1;background-color:rgb(126 34 206 / var(--tw-bg-opacity))}.hover\:bg-indigo-600:hover{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity))}.hover\:text-blue-500:hover{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity))}.hover\:text-indigo-700:hover{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}.hover\:text-gray-800:hover{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity))}.hover\:text-indigo-600:hover{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity))}.hover\:text-black:hover{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity))}.hover\:text-gray-200:hover{--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity))}.hover\:text-gray-400:hover{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))}.hover\:text-gray-500:hover{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.hover\:opacity-90:hover{opacity:0.9}.focus\:border-blue-600:focus{--tw-border-opacity:1;border-color:rgb(37 99 235 / var(--tw-border-opacity))}.focus\:border-gray-300:focus{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity))}.focus\:text-gray-700:focus{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}.focus\:no-underline:focus{-webkit-text-decoration-line:none;text-decoration-line:none}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-4:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-blue-600:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(37 99 235 / var(--tw-ring-opacity))}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241 / var(--tw-ring-opacity))}.focus\:ring-opacity-50:focus{--tw-ring-opacity:0.5}.focus\:ring-opacity-0:focus{--tw-ring-opacity:0}.focus\:ring-offset-2:focus{--tw-ring-offset-width:2px}.focus\:ring-offset-1:focus{--tw-ring-offset-width:1px}.focus-visible\:ring:focus-visible{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.active\:border-gray-300:active{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity))}.active\:bg-gray-200:active{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity))}.group:hover .group-hover\:w-full{width:100%}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-125{--tw-scale-x:1.25;--tw-scale-y:1.25;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-95{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity))}.peer:checked ~ .peer-checked\:text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}.peer:focus ~ .peer-focus\:text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity))}@media (min-width: 640px){.sm\:col-span-2{grid-column:span 2 / span 2}.sm\:col-span-3{grid-column:span 3 / span 3}.sm\:mr-2{margin-right:0.5rem}.sm\:mt-0{margin-top:0px}.sm\:-mt-40{margin-top:-10rem}.sm\:mb-20{margin-bottom:5rem}.sm\:ml-6{margin-left:1.5rem}.sm\:mb-0{margin-bottom:0px}.sm\:ml-auto{margin-left:auto}.sm\:mb-8{margin-bottom:2rem}.sm\:mt-16{margin-top:4rem}.sm\:box-content{box-sizing:content-box}.sm\:block{display:block}.sm\:flex{display:flex}.sm\:grid{display:grid}.sm\:h-48{height:12rem}.sm\:w-auto{width:auto}.sm\:w-11\/12{width:91.666667%}.sm\:w-2\/3{width:66.666667%}.sm\:w-4\/5{width:80%}.sm\:grid-cols-6{grid-template-columns:repeat(6, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:justify-start{justify-content:flex-start}.sm\:space-x-6 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem * var(--tw-space-x-reverse));margin-left:calc(1.5rem * calc(1 - var(--tw-space-x-reverse)))}.sm\:rounded-lg{border-radius:0.5rem}.sm\:border-0{border-width:0px}.sm\:border-2{border-width:2px}.sm\:px-5{padding-left:1.25rem;padding-right:1.25rem}.sm\:px-0{padding-left:0px;padding-right:0px}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:py-16{padding-top:4rem;padding-bottom:4rem}.sm\:px-8{padding-left:2rem;padding-right:2rem}.sm\:px-2{padding-left:0.5rem;padding-right:0.5rem}.sm\:py-12{padding-top:3rem;padding-bottom:3rem}.sm\:py-20{padding-top:5rem;padding-bottom:5rem}.sm\:px-12{padding-left:3rem;padding-right:3rem}.sm\:pb-32{padding-bottom:8rem}.sm\:pt-20{padding-top:5rem}.sm\:pt-8{padding-top:2rem}.sm\:pr-4{padding-right:1rem}.sm\:text-left{text-align:left}.sm\:text-center{text-align:center}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}.sm\:text-7xl{font-size:4.5rem;line-height:1}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-6xl{font-size:3.75rem;line-height:1}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}.sm\:opacity-100{opacity:1}}@media (min-width: 768px){.md\:relative{position:relative}.md\:order-none{order:0}.md\:col-span-1{grid-column:span 1 / span 1}.md\:col-span-2{grid-column:span 2 / span 2}.md\:mx-0{margin-left:0px;margin-right:0px}.md\:mb-0{margin-bottom:0px}.md\:-mt-56{margin-top:-14rem}.md\:ml-10{margin-left:2.5rem}.md\:mb-1{margin-bottom:0.25rem}.md\:mt-0{margin-top:0px}.md\:-ml-12{margin-left:-3rem}.md\:-mr-16{margin-right:-4rem}.md\:block{display:block}.md\:flex{display:flex}.md\:hidden{display:none}.md\:h-32{height:8rem}.md\:h-24{height:6rem}.md\:h-full{height:100%}.md\:h-auto{height:auto}.md\:w-1\/3{width:33.333333%}.md\:w-1\/2{width:50%}.md\:w-1\/4{width:25%}.md\:w-auto{width:auto}.md\:w-32{width:8rem}.md\:w-40{width:10rem}.md\:max-w-none{max-width:none}.md\:max-w-md{max-width:28rem}.md\:flex-shrink-0{flex-shrink:0}.md\:flex-grow-0{flex-grow:0}.md\:translate-x-0{--tw-translate-x:0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.md\:grid-cols-5{grid-template-columns:repeat(5, minmax(0, 1fr))}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:items-start{align-items:flex-start}.md\:items-center{align-items:center}.md\:gap-0{gap:0px}.md\:space-y-0 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px * var(--tw-space-y-reverse))}.md\:rounded-xl{border-radius:0.75rem}.md\:rounded-lg{border-radius:0.5rem}.md\:bg-none{background-image:none}.md\:p-16{padding:4rem}.md\:px-6{padding-left:1.5rem;padding-right:1.5rem}.md\:px-10{padding-left:2.5rem;padding-right:2.5rem}.md\:px-0{padding-left:0px;padding-right:0px}.md\:py-20{padding-top:5rem;padding-bottom:5rem}.md\:px-12{padding-left:3rem;padding-right:3rem}.md\:px-20{padding-left:5rem;padding-right:5rem}.md\:px-8{padding-left:2rem;padding-right:2rem}.md\:py-8{padding-top:2rem;padding-bottom:2rem}.md\:pb-0{padding-bottom:0px}.md\:pb-10{padding-bottom:2.5rem}.md\:pb-48{padding-bottom:12rem}.md\:pt-8{padding-top:2rem}.md\:pl-0{padding-left:0px}.md\:pl-10{padding-left:2.5rem}.md\:pl-16{padding-left:4rem}.md\:pr-0{padding-right:0px}.md\:pb-12{padding-bottom:3rem}.md\:pt-20{padding-top:5rem}.md\:text-left{text-align:left}.md\:text-center{text-align:center}.md\:text-right{text-align:right}.md\:text-6xl{font-size:3.75rem;line-height:1}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:text-8xl{font-size:6rem;line-height:1}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:leading-tight{line-height:1.25}.md\:leading-8{line-height:2rem}}@media (min-width: 1024px){.lg\:relative{position:relative}.lg\:left-auto{left:auto}.lg\:top-0{top:0px}.lg\:order-none{order:0}.lg\:order-first{order:-9999}.lg\:col-span-2{grid-column:span 2 / span 2}.lg\:mx-0{margin-left:0px;margin-right:0px}.lg\:my-0{margin-top:0px;margin-bottom:0px}.lg\:my-12{margin-top:3rem;margin-bottom:3rem}.lg\:mb-32{margin-bottom:8rem}.lg\:mb-5{margin-bottom:1.25rem}.lg\:ml-auto{margin-left:auto}.lg\:mr-0{margin-right:0px}.lg\:mt-0{margin-top:0px}.lg\:mt-32{margin-top:8rem}.lg\:mb-10{margin-bottom:2.5rem}.lg\:mt-20{margin-top:5rem}.lg\:-mr-6{margin-right:-1.5rem}.lg\:-mt-16{margin-top:-4rem}.lg\:-ml-20{margin-left:-5rem}.lg\:block{display:block}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:h-5{height:1.25rem}.lg\:h-6{height:1.5rem}.lg\:h-7{height:1.75rem}.lg\:h-9{height:2.25rem}.lg\:h-auto{height:auto}.lg\:h-10{height:2.5rem}.lg\:h-16{height:4rem}.lg\:w-1\/5{width:20%}.lg\:w-3\/5{width:60%}.lg\:w-auto{width:auto}.lg\:w-5\/12{width:41.666667%}.lg\:w-7\/12{width:58.333333%}.lg\:w-2\/3{width:66.666667%}.lg\:w-1\/2{width:50%}.lg\:w-32{width:8rem}.lg\:w-40{width:10rem}.lg\:w-2\/5{width:40%}.lg\:w-3\/4{width:75%}.lg\:max-w-none{max-width:none}.lg\:max-w-xl{max-width:36rem}.lg\:flex-shrink-0{flex-shrink:0}.lg\:flex-grow-0{flex-grow:0}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-6{grid-template-columns:repeat(6, minmax(0, 1fr))}.lg\:flex-row{flex-direction:row}.lg\:items-center{align-items:center}.lg\:justify-start{justify-content:flex-start}.lg\:justify-center{justify-content:center}.lg\:gap-8{gap:2rem}.lg\:space-x-7 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.75rem * var(--tw-space-x-reverse));margin-left:calc(1.75rem * calc(1 - var(--tw-space-x-reverse)))}.lg\:space-y-0 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px * var(--tw-space-y-reverse))}.lg\:space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.lg\:rounded-xl{border-radius:0.75rem}.lg\:border-transparent{border-color:transparent}.lg\:bg-transparent{background-color:transparent}.lg\:px-16{padding-left:4rem;padding-right:4rem}.lg\:py-24{padding-top:6rem;padding-bottom:6rem}.lg\:px-5{padding-left:1.25rem;padding-right:1.25rem}.lg\:py-32{padding-top:8rem;padding-bottom:8rem}.lg\:py-12{padding-top:3rem;padding-bottom:3rem}.lg\:px-20{padding-left:5rem;padding-right:5rem}.lg\:px-10{padding-left:2.5rem;padding-right:2.5rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:pb-0{padding-bottom:0px}.lg\:pl-16{padding-left:4rem}.lg\:pl-6{padding-left:1.5rem}.lg\:pr-10{padding-right:2.5rem}.lg\:pt-0{padding-top:0px}.lg\:pb-56{padding-bottom:14rem}.lg\:pt-20{padding-top:5rem}.lg\:pl-10{padding-left:2.5rem}.lg\:pr-0{padding-right:0px}.lg\:pr-12{padding-right:3rem}.lg\:pl-4{padding-left:1rem}.lg\:pr-4{padding-right:1rem}.lg\:text-left{text-align:left}.lg\:text-xl{font-size:1.25rem;line-height:1.75rem}.lg\:text-7xl{font-size:4.5rem;line-height:1}.lg\:text-5xl{font-size:3rem;line-height:1}.lg\:text-lg{font-size:1.125rem;line-height:1.75rem}.lg\:text-4xl{font-size:2.25rem;line-height:2.5rem}.lg\:text-9xl{font-size:8rem;line-height:1}.lg\:text-6xl{font-size:3.75rem;line-height:1}.lg\:leading-relaxed{line-height:1.625}.lg\:leading-tight{line-height:1.25}.lg\:text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity))}.lg\:text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}}@media (min-width: 1280px){.xl\:mb-12{margin-bottom:3rem}.xl\:-mt-24{margin-top:-6rem}.xl\:mr-5{margin-right:1.25rem}.xl\:h-10{height:2.5rem}.xl\:h-6{height:1.5rem}.xl\:h-7{height:1.75rem}.xl\:h-8{height:2rem}.xl\:w-40{width:10rem}.xl\:w-2\/5{width:40%}.xl\:w-3\/5{width:60%}.xl\:max-w-none{max-width:none}.xl\:flex-shrink-0{flex-shrink:0}.xl\:flex-grow-0{flex-grow:0}.xl\:flex-row{flex-direction:row}.xl\:space-x-12 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(3rem * var(--tw-space-x-reverse));margin-left:calc(3rem * calc(1 - var(--tw-space-x-reverse)))}.xl\:px-0{padding-left:0px;padding-right:0px}.xl\:py-24{padding-top:6rem;padding-bottom:6rem}.xl\:px-12{padding-left:3rem;padding-right:3rem}.xl\:py-20{padding-top:5rem;padding-bottom:5rem}.xl\:pb-64{padding-bottom:16rem}.xl\:pr-12{padding-right:3rem}.xl\:pl-6{padding-left:1.5rem}.xl\:text-6xl{font-size:3.75rem;line-height:1}}@media (min-width: 1536px){.\32xl\:mb-16{margin-bottom:4rem}.\32xl\:mt-32{margin-top:8rem}.\32xl\:h-11{height:2.75rem}.\32xl\:h-7{height:1.75rem}.\32xl\:h-8{height:2rem}.\32xl\:h-9{height:2.25rem}.\32xl\:pr-0{padding-right:0px}.\32xl\:pr-24{padding-right:6rem}}</style>    <link rel="stylesheet" href=""><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="pb-0 antialiased bg-white">
+
+    <div class="px-12 mx-auto max-w-7xl">
+        <!-- Header Bar -->
+        <div class="flex flex-wrap items-center justify-between w-full h-24 text-black">
+            <div class="relative z-10 flex items-center w-auto leading-10 lg:flex-grow-0 lg:flex-shrink-0 lg:text-left">
+                <a href="#_" class="inline-block font-sans text-2xl font-extrabold text-left text-black no-underline bg-transparent cursor-pointer sm:px-2 focus:no-underline">
+                    <svg class="w-10 h-10 text-black fill-current" viewBox="0 0 39 15" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.252 1.152C4.184 2.526.454 6.918.061 14.329c1.963-4.049 4.798-5.975 8.503-5.778 2.115.112 3.84 1.295 5.75 2.603 3.11 2.133 6.712 4.601 13.281 3.324 7.068-1.374 10.798-5.766 11.191-13.177-1.963 4.049-4.798 5.975-8.503 5.779-2.115-.113-3.84-1.296-5.75-2.604-3.11-2.133-6.712-4.601-13.281-3.324z" fill-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="relative mt-2 font-medium leading-10 sm:pr-4 md:flex-grow-0 md:flex-shrink-0 md:mt-0 md:text-right lg:flex-grow-0 lg:flex-shrink-0">
+                <a href="#_" class="px-5 py-4 text-lg font-medium text-white bg-purple-600 shadow-xl hover:bg-purple-700 rounded-2xl" data-rounded="rounded-2xl" data-primary="purple-600">Try for free</a>
+            </div>
+        </div>
+        <!-- End Header Bar -->
+
+        <!-- Start Main Content -->
+        <div class="top-0 left-0 w-full h-auto mt-12 sm:mt-16 lg:mt-20 2xl:mt-32">
+
+            <div class="flex flex-col items-center h-full mx-auto max-w-7xl">
+                <div class="relative z-10 w-full mb-5 space-y-10 sm:mb-8 xl:mb-12 2xl:mb-16">
+                    <p class="-mb-5 text-sm font-bold text-purple-500 uppercase" data-primary="purple-500">The Ultimate TailwindCSS Page Builder</p>
+                    <h1 class="text-5xl font-bold xm:text-7xl lg:text-9xl"><span class="text-gray-900">Craft Your</span> <span class="text-purple-600" data-primary="purple-600">Design</span></h1>
+                    <p class="text-base text-gray-500 sm:text-lg">Tails is the ultimate drag-n drop TailwindCSS page builder available. You can easily design landing pages and user experiences that will help your business turn visitors into customers. Every template and component has been hand-crafted and designed with you in mind.
+                    </p>
+                    <div class="flex flex-col items-center w-full space-x-5 lg:flex-row">
+                        <a href="#_" class="w-full px-12 py-6 text-2xl font-medium text-center text-white bg-purple-600 shadow-xl hover:bg-purple-700 lg:w-auto rounded-3xl" data-rounded="rounded-3xl" data-primary="purple-600">Try for free</a>
+                        <a href="#_" class="flex items-center justify-center w-full px-10 py-6 mt-5 text-xl font-medium text-center text-gray-900 underline md:mt-0 md:w-auto rounded-3xl hover:bg-gray-900 hover:text-white" data-rounded="rounded-3xl">
+                            <svg class="mr-2 w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"></path><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 00-1.3-3.2 4.2 4.2 0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 00-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 00-.1 3.2A4.6 4.6 0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"></path></svg>
+                            <span>View On Github</span></a>
+                    </div>
+                </div>
+                <div class="relative z-0 w-full mt-8">
+                    <div class="relative overflow-hidden shadow-2xl">
+                        <div class="flex items-center flex-none px-4 bg-black rounded-b-none h-11 rounded-xl" data-rounded="rounded-xl" data-rounded-max="rounded-full">
+                            <div class="flex space-x-1.5">
+                                <div class="w-3 h-3 border-2 border-red-500 rounded-full"></div>
+                                <div class="w-3 h-3 border-2 border-yellow-400 rounded-full"></div>
+                                <div class="w-3 h-3 border-2 border-green-400 rounded-full"></div>
+                            </div>
+                        </div>
+                        <img src="https://cdn.devdojo.com/images/december2020/dashboard-no-head.jpeg" class="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Main Content -->
+    </div>
+
+</section><section class="bg-white">
+    <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
+        <nav class="flex flex-wrap justify-center -mx-5 -my-2">
+            <div class="px-5 py-2">
+                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    About
+                </a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Blog
+                </a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Team
+                </a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Pricing
+                </a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Contact
+                </a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Terms
+                </a>
+            </div>
+        </nav>
+        <div class="flex justify-center mt-8 space-x-6">
+            <a href="#" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">Facebook</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">Instagram</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">Twitter</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">GitHub</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">Dribbble</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clip-rule="evenodd" />
+                </svg>
+            </a>
+        </div>
+        <p class="mt-8 text-base leading-6 text-center text-gray-400">
+            &copy; 2021 SomeCompany, Inc. All rights reserved.
+        </p>
+    </div>
+</section><section class="relative w-full h-auto py-8 overflow-hidden bg-white sm:py-12 md:py-20 lg:py-32">
+    <img src="https://cdn.devdojo.com/images/march2021/bg-gradient.png" class="absolute left-0 object-cover w-full h-full opacity-50 sm:opacity-100">
+    <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent to-white"></div>
+    <div class="relative flex flex-col items-center justify-start h-full mx-auto px-14 max-w-7xl lg:flex-row">
+
+        <div class="relative z-10 w-full h-full lg:w-1/2 xl:pr-12 2xl:pr-24">
+            <div class="flex flex-col items-start justify-center h-full pt-12 lg:pt-0">
+                <h1 class="max-w-lg mx-auto text-4xl font-bold tracking-tight text-center text-gray-700 lg:mx-0 sm:text-5xl lg:text-6xl lg:text-left">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">Easy&nbsp;on-boarding</span>
+                    with crafted experience
+                </h1>
+                <p class="max-w-md mx-auto mt-4 text-center text-gray-500 lg:mx-0 lg:text-left">Allowing you to have more time back in your day to work on the things that matter and multiple high fidelity conversations all at the same time.</p>
+                <div class="max-w-lg mx-auto lg:mx-0">
+                    <div class="flex items-center justify-center w-full my-6 space-x-2 lg:justify-start sm:space-x-6 lg:my-12">
+                        <a href="#_" class="px-4 py-3 text-sm font-bold tracking-tight text-white transition duration-200 transform rounded-lg shadow-2xl sm:px-6 bg-gradient-to-tr from-blue-500 to-blue-300 sm:text-lg hover:scale-105">Free Signup</a>
+                        <a href="#_" class="flex items-center justify-start px-4 py-3 text-sm font-bold tracking-tight text-gray-500 transition duration-200 rounded-lg sm:px-6 sm:text-lg group hover:text-blue-500">
+                            <svg class="w-6 mr-2 text-gray-500 transition duration-200 fill-current group-hover:scale-125 group-hover:text-blue-500" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.26587 8.87988H2.26587V20.8799C2.26587 21.4103 2.47658 21.919 2.85166 22.2941C3.22673 22.6692 3.73544 22.8799 4.26587 22.8799H16.2659V20.8799H4.26587V8.87988Z" /><path d="M20.2659 2.87988H8.26587C7.73544 2.87988 7.22673 3.0906 6.85166 3.46567C6.47658 3.84074 6.26587 4.34945 6.26587 4.87988V16.8799C6.26587 17.4103 6.47658 17.919 6.85166 18.2941C7.22673 18.6692 7.73544 18.8799 8.26587 18.8799H20.2659C20.7963 18.8799 21.305 18.6692 21.6801 18.2941C22.0552 17.919 22.2659 17.4103 22.2659 16.8799V4.87988C22.2659 4.34945 22.0552 3.84074 21.6801 3.46567C21.305 3.0906 20.7963 2.87988 20.2659 2.87988ZM11.2659 14.8799V6.87988L18.2659 10.8799L11.2659 14.8799Z" /></svg>
+                            Watch Demo
+                        </a>
+                    </div>
+                    <div class="hidden grid-cols-3 gap-8 sm:grid">
+                        <div class="col-span-1 text-center lg:text-left">
+                            <h4 class="text-3xl font-bold tracking-tight text-transparent lg:text-4xl bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500">+1M</h4>
+                            <p class="text-sm font-semibold text-gray-400">Happy users</p>
+                        </div>
+                        <div class="col-span-1 text-center lg:text-left">
+                            <h4 class="text-3xl font-bold tracking-tight text-transparent lg:text-4xl bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500">95%</h4>
+                            <p class="text-sm font-semibold text-gray-400">Time saving</p>
+                        </div>
+                        <div class="col-span-1 text-center lg:text-left">
+                            <h4 class="text-3xl font-bold tracking-tight text-transparent lg:text-4xl bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500">200+</h4>
+                            <p class="text-sm font-semibold text-gray-400">Premium modules</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative z-10 w-full h-full px-10 pb-32 mt-16 lg:w-1/2 md:px-20 lg:px-5 xl:px-0 lg:pb-0 lg:mt-0 group">
+
+            <div class="relative flex items-center justify-center w-full h-full">
+                <div class="relative w-full h-auto md:h-full lg:h-auto">
+                    <img class="absolute right-0 z-10 object-cover object-center w-32 -mt-8 -mr-8 transition duration-300 transform rounded-md shadow-2xl md:w-40 lg:w-40 lg:top-0 lg:-mt-16 md:-mr-16 lg:-mr-6 md:rounded-lg lg:rounded-xl group-hover:scale-105" src="https://cdn.devdojo.com/images/september2021/payment.png" alt="image" />
+                    <img class="absolute bottom-0 left-0 z-10 object-cover object-center w-24 -mb-12 -ml-4 transition duration-300 transform rounded-md shadow-2xl md:w-32 lg:w-32 xl:w-40 md:-ml-12 md:rounded-lg lg:rounded-xl group-hover:scale-95" src="https://cdn.devdojo.com/images/september2021/chart.png" alt="image" />
+                    <div class="relative w-full h-auto overflow-hidden transition duration-300 transform shadow-lg rounded-xl group-hover:scale-95">
+                        <img class="w-full" src="https://cdn.devdojo.com/images/september2021/dashboard.png" alt="image" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><div class="py-0 bg-white md:py-8 lg:py-12">
+  <div class="mx-auto max-w-7xl md:px-8">
+    <div class="flex flex-col overflow-hidden shadow-xl md:h-auto md:flex-row bg-gradient-to-br from-gray-900 to-black md:rounded-xl">
+      <!-- Left Content -->
+      <div class="flex flex-col w-full p-12 md:w-1/2 lg:w-2/5 md:p-16">
+        <h2 class="text-4xl font-bold text-left text-white md:text-6xl lg:text-7xl mb-7">Start Building Today!</h2>
+
+        <p class="mb-12 text-2xl text-left text-gray-400 md:max-w-md">
+         Kick-start your next great project with our designs that will save you hundreds of hours.
+        </p>
+
+        <div class="mt-auto">
+          <a href="#" class="inline-block w-full px-10 py-5 text-lg font-semibold text-center text-gray-800 transition duration-100 bg-white rounded-lg outline-none hover:bg-gray-100 active:bg-gray-200 focus-visible:ring ring-indigo-300 md:w-auto md:text-xl">Join Now</a>
+        </div>
+      </div>
+
+      <!-- Start right image -->
+      <div class="order-first w-full h-56 bg-gray-700 bg-center bg-cover md:w-1/2 lg:w-3/5 md:h-auto md:order-none" style="background-image:url('https://cdn.devdojo.com/images/october2021/laptop-bg.jpeg')"></div>
+    </div>
+  </div>
+</div><section class="w-full py-12 bg-white sm:py-20" x-data="{ page: 1, total_pages: 3 }"  data-tails-scripts="//unpkg.com/alpinejs">
+    <div class="flex flex-col items-center justify-center mx-auto xl:flex-row max-w-7xl">
+        <div class="relative flex flex-col items-start justify-center w-full h-full max-w-2xl px-6 mx-auto xl:max-w-none xl:w-2/5">
+
+            <h2 class="text-3xl font-normal leading-none text-gray-900 sm:w-4/5 sm:text-6xl text-3">New stories from the team.</h2>
+            <div class="w-20 h-1 mt-3 ml-1 bg-indigo-600 rounded-full" data-primary="indigo-600" data-rounded="rounded-full"></div>
+            <div class="relative flex mt-6 space-x-2">
+                <div @click="if(page > 1){ page-=1 }" class="flex items-center justify-center w-10 h-10 text-white bg-indigo-600 rounded cursor-pointer hover:bg-indigo-600" data-primary="indigo-600" data-rounded="rounded">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </div>
+                <div @click="if(page < total_pages){ page+=1 }" class="flex items-center justify-center w-10 h-10 text-white bg-indigo-600 rounded cursor-pointer hover:bg-indigo-600" data-primary="indigo-600" data-rounded="rounded">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </div>
+            </div>
+            <svg class="absolute top-0 right-0 hidden w-auto h-24 mt-20 text-indigo-600 fill-current sm:block xl:mr-5 xl:-mt-24" data-primary="indigo-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 74"><defs/><g fill-rule="nonzero"><path d="M43.13 71.58c.29-.025.58-.025.87 0 .3 0 .71-.14 1-.17.54 0 1.08-.19 1.62-.23l2.3-.17 4.65-.25 6.47-.26h.68c3-.15 6-.3 9-.53 1.68-.14 5.83-.49 6.21-.52.63 0 4.36-.53 5-.63.25 0 1.95-.35 3.35-.58-.09-1-.55-1.77-.62-2.71-4.33.66-8.7 1.18-13 1.51-5.34.4-10.71.66-16.08 1l-7 .39c-1.4 0-2.82-.31-4.17-.26a2 2 0 00-1 .31c-.3.21-.4.16-.5.3a1.18 1.18 0 00-.12.81c.06.84.66 2.11 1.34 1.99zM106.33 62.04l.5-.23c.31-.13.72-.33 1.16-.56.88-.46 1.94-1 2.59-1.38l.56-.31a31.87 31.87 0 002.81-1.74 48.77 48.77 0 0014-13.59 38.22 38.22 0 004.34-8.87 28.9 28.9 0 001.51-9.86 31.56 31.56 0 00-3.3-13.46 23.9 23.9 0 00-3.62-5.22 20.47 20.47 0 00-2.38-2.22c-.42-.34-.89-.63-1.33-.94a10.88 10.88 0 00-1.38-.85A18.21 18.21 0 00109.16.92c-.5.11-1 .22-1.45.33-.45.11-.88.31-1.3.47-.42.16-.86.3-1.27.49-.41.19-.8.41-1.21.61A27.71 27.71 0 0098.5 6.5l-1.51 1.42-1.59 1.84c-.51.66-1 1.36-1.44 2-.44.64-.75 1.28-1 1.78a22.66 22.66 0 00-2 5 23.44 23.44 0 00-.82 5.31 26.71 26.71 0 00.72 7c.22 1.16.65 2.26 1 3.38a33.94 33.94 0 001.41 3.21 36.93 36.93 0 008.44 10.95 47.5 47.5 0 005.77 4.43 35.5 35.5 0 0010.02 4.59 86.41 86.41 0 0010 2.09 84.59 84.59 0 0018.2.51c4.8-.31 9.33-.8 13.8-1.39 2.25-.3 4.49-.63 6.76-1l3.43-.59.83-.11a15.59 15.59 0 001.98-.25 46 46 0 014.66-.82c.69-.12 2.24-.87 2.34-1.35.06-.28-.19-.56-.15-.85.09-.65-1.16-1.47-2.06-1.25-.9.22-1.89.51-2.84.73-.95.22-2 .37-3 .62a9.82 9.82 0 00-1.16.38c-.19.06-.39.13-.58.18l-.29.08-.69.12c-3.55.62-7 1.3-10.81 1.68-5.54.53-11.42 1.31-17.15 1.37a73.61 73.61 0 01-18.84-1.81 41.54 41.54 0 01-16.81-8.06 37.32 37.32 0 01-7.9-8.78 27.1 27.1 0 01-4.12-10.8C91.25 17.6 98.76 6.5 108.89 3.76a15.83 15.83 0 0114.56 3.4 23.24 23.24 0 017.36 13.74 28.32 28.32 0 01.29 8 28.05 28.05 0 01-2.06 7.7 37.16 37.16 0 01-5 8.63 39.08 39.08 0 01-7 7l-.87.66-.14.11c-1.69 1.29-3.61 2.56-5.55 3.75a54.34 54.34 0 01-12 5.4c-.42 1-1 2.35-.6 3.17 1.18-.35 2.25-.69 3.52-1.19.8-.28 1.61-.63 2.44-1 .83-.37 1.66-.72 2.49-1.09z"/><path d="M46.93 71a8.72 8.72 0 011.16 0c.51 0 1.48.05 2 0l8.52-.5c8.84-.54 17.78-1 26.66-2.45 2.33-.38 4.67-.8 7-1.29a56.65 56.65 0 0010.45-3.26 85.2 85.2 0 009.11-4.57 48.44 48.44 0 0014-12c.86-1 1.57-2.14 2.33-3.2s1.34-2.12 1.89-3.23a35.91 35.91 0 002.81-7.11 31.08 31.08 0 00.4-12.78 6.21 6.21 0 01-1.89 2.64 25.44 25.44 0 01-1 9.32l-.09.26a21.31 21.31 0 01-.69 2 41.94 41.94 0 01-3.72 7.43 41.78 41.78 0 01-5.3 6.63 52.72 52.72 0 01-15.45 10.61 73.71 73.71 0 01-18.17 5.41 207.23 207.23 0 01-24.09 2.59l-15.92.87a4.07 4.07 0 01-.01 2.63zM21.1 71.79a1.43 1.43 0 01-.27-1.49 2.72 2.72 0 011.81-1.54c1-.14 2.13.44 3.2.44 1.47 0 2.94-.27 4.42-.39 1-.08 1.92 0 2.86-.15a17 17 0 012.57-.11 5.7 5.7 0 001.17 0 3 3 0 011.12-.16c1 .18 1.3 2.22.71 2.91-.45.53-1.56.36-2.18.36h-2.67c-2.13.13-4.28 0-6.41.1-.91 0-1.8.24-2.7.35-.9.11-1.7.15-2.56.2a1.31 1.31 0 01-1.07-.52zM7.5 71.7a3.09 3.09 0 010-1 1.26 1.26 0 01.4-.74 2.18 2.18 0 012.16-.49 9.2 9.2 0 002.87 0 9.22 9.22 0 013.1 0 2 2 0 011.17.72c.46.6.61 1.35-.14 1.8a5.18 5.18 0 01-2.91.44c-1.34-.13-2.75.53-4.15.76a2 2 0 01-1.34-.22A2.49 2.49 0 017.5 71.7zM.01 71.57c.082-.29.2-.569.35-.83a1.91 1.91 0 013.27-.25c.54.63.61 2.26-.16 2.72a4.27 4.27 0 01-1.32.44c-1.12.1-2.05-.23-2.14-2.08z"/></g></svg>
+
+        </div>
+        <div class="box-content relative flex items-center w-full h-auto max-w-2xl py-5 mx-auto overflow-hidden xl:w-3/5 rounded-xl bg-gradient-to-r from-transparent via-transparent to-gray-100">
+
+            <!-- Slide Page 1 -->
+            <div class="flex px-6 space-x-6 transition duration-500 ease-out transform xl:pl-6 h-94" :class="{ '-translate-x-full pr-10' : page > 1, 'relative': page == 1, 'absolute': page != 1 }">
+
+                <!-- story 1 -->
+                <div class="flex flex-col flex-shrink-0 w-1/2 overflow-hidden rounded-lg shadow-lg" data-rounded="rounded-lg" data-rounded-max="rounded-full">
+                    <div class="flex-shrink-0">
+                        <a href="#_">
+                            <img class="object-cover w-full h-32 sm:h-48" src="https://cdn.devdojo.com/images/march2021/slide-1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="flex flex-col justify-between flex-1 p-6 bg-white">
+                        <div class="flex-1">
+                            <p class="inline-block py-1 pl-10 pr-4 mb-2 -ml-10 text-xs font-medium leading-5 text-white transform -translate-y-2 bg-indigo-600 rounded" data-primary="indigo-600" data-rounded="rounded">
+                                <a href="#_" class="hover:underline" rel="category">
+                                    Design
+                                </a>
+                            </p>
+                            <a href="#_" class="block">
+                                <span class="mt-2 text-base font-semibold leading-tight leading-7 text-gray-900 sm:text-xl">
+                                    How to build the perfect landing page.
+                                </span>
+                                <span class="block mt-3 text-xs leading-6 text-gray-500 sm:text-sm">
+                                    If you want to learn the tips and tricks to building the perfect landing page you've got to follow these proven...
+                                </span>
+                            </a>
+                        </div>
+                        <div class="items-center hidden mt-6 sm:flex">
+                            <div class="relative">
+                                <p class="text-xs font-medium leading-5 text-gray-500">
+                                    <a href="#_" class="hover:underline">John Doe</a>
+                                    <span class="mx-1">·</span><time class="ml-1">January 21, 2022</time>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- story 2 -->
+                <div class="flex flex-col flex-shrink-0 w-1/2 overflow-hidden rounded-lg shadow-lg" data-rounded="rounded-lg" data-rounded-max="rounded-full">
+                    <div class="flex-shrink-0">
+                        <a href="#_">
+                            <img class="object-cover w-full h-32 sm:h-48" src="https://cdn.devdojo.com/images/march2021/slide-2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="flex flex-col justify-between flex-1 p-6 bg-white">
+                        <div class="flex-1">
+                            <p class="inline-block py-1 pl-10 pr-4 mb-2 -ml-10 text-xs font-medium leading-5 text-white transform -translate-y-2 bg-indigo-600 rounded" data-primary="indigo-600" data-rounded="rounded">
+                                <a href="#_" class="hover:underline" rel="category">
+                                    Design
+                                </a>
+                            </p>
+                            <a href="#_" class="block">
+                                <span class="mt-2 text-base font-semibold leading-tight leading-7 text-gray-900 sm:text-xl">
+                                    How to build the perfect landing page.
+                                </span>
+                                <span class="block mt-3 text-xs leading-6 text-gray-500 sm:text-sm">
+                                    If you want to learn the tips and tricks to building the perfect landing page you've got to follow these proven...
+                                </span>
+                            </a>
+                        </div>
+                        <div class="items-center hidden mt-6 sm:flex">
+                            <div class="relative">
+                                <p class="text-xs font-medium leading-5 text-gray-500">
+                                    <a href="#_" class="hover:underline">John Doe</a>
+                                    <span class="mx-1">·</span><time class="ml-1">January 21, 2022</time>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide Page 2 -->
+            <div class="flex space-x-6 transition duration-500 ease-out transform h-94" :class="{ '-translate-x-full pr-10' : page > 2, 'translate-x-full' : page < 2, 'translate-x-0 ml-5' : page == 2, 'relative': page == 2, 'absolute': page != 2 }" x-cloak>
+
+                <!-- story 3 -->
+                <div class="flex flex-col flex-shrink-0 w-1/2 overflow-hidden rounded-lg shadow-lg" data-rounded="rounded-lg" data-rounded-max="rounded-full">
+                    <div class="flex-shrink-0">
+                        <a href="#_">
+                            <img class="object-cover w-full h-32 sm:h-48" src="https://cdn.devdojo.com/images/march2021/slide-3.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="flex flex-col justify-between flex-1 p-6 bg-white">
+                        <div class="flex-1">
+                            <p class="inline-block py-1 pl-10 pr-4 mb-2 -ml-10 text-xs font-medium leading-5 text-white transform -translate-y-2 bg-indigo-600 rounded" data-primary="indigo-600" data-rounded="rounded">
+                                <a href="#_" class="hover:underline" rel="category">
+                                    Design
+                                </a>
+                            </p>
+                            <a href="#_" class="block">
+                                <span class="mt-2 text-base font-semibold leading-tight leading-7 text-gray-900 sm:text-xl">
+                                    How to build the perfect landing page.
+                                </span>
+                                <span class="block mt-3 text-xs leading-6 text-gray-500 sm:text-sm">
+                                    If you want to learn the tips and tricks to building the perfect landing page you've got to follow these proven...
+                                </span>
+                            </a>
+                        </div>
+                        <div class="items-center hidden mt-6 sm:flex">
+                            <div class="relative">
+                                <p class="text-xs font-medium leading-5 text-gray-500">
+                                    <a href="#_" class="hover:underline">John Doe</a>
+                                    <span class="mx-1">·</span><time class="ml-1">January 21, 2022</time>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- story 4 -->
+                <div class="flex flex-col flex-shrink-0 w-1/2 overflow-hidden rounded-lg shadow-lg" data-rounded="rounded-lg" data-rounded-max="rounded-full">
+                    <div class="flex-shrink-0">
+                        <a href="#_">
+                            <img class="object-cover w-full h-32 sm:h-48" src="https://cdn.devdojo.com/images/march2021/slide-4.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="flex flex-col justify-between flex-1 p-6 bg-white">
+                        <div class="flex-1">
+                            <p class="inline-block py-1 pl-10 pr-4 mb-2 -ml-10 text-xs font-medium leading-5 text-white transform -translate-y-2 bg-indigo-600 rounded" data-primary="indigo-600" data-rounded="rounded">
+                                <a href="#_" class="hover:underline" rel="category">
+                                    Design
+                                </a>
+                            </p>
+                            <a href="#_" class="block">
+                                <span class="mt-2 text-base font-semibold leading-tight leading-7 text-gray-900 sm:text-xl">
+                                    How to build the perfect landing page.
+                                </span>
+                                <span class="block mt-3 text-xs leading-6 text-gray-500 sm:text-sm">
+                                    If you want to learn the tips and tricks to building the perfect landing page you've got to follow these proven...
+                                </span>
+                            </a>
+                        </div>
+                        <div class="items-center hidden mt-6 sm:flex">
+                            <div class="relative">
+                                <p class="text-xs font-medium leading-5 text-gray-500">
+                                    <a href="#_" class="hover:underline">John Doe</a>
+                                    <span class="mx-1">·</span><time class="ml-1">January 21, 2022</time>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End slide page 2 -->
+
+            <!-- Slide Page 3 -->
+            <div class="flex space-x-6 transition duration-500 ease-out transform h-94" :class="{ 'translate-x-full' : page < 3, 'translate-x-0 ml-5' : page == 3, 'relative': page == 3, 'absolute': page != 3 }" x-cloak>
+
+                <!-- story 5 -->
+                <div class="flex flex-col flex-shrink-0 w-1/2 overflow-hidden rounded-lg shadow-lg" data-rounded="rounded-lg" data-rounded-max="rounded-full">
+                    <div class="flex-shrink-0">
+                        <a href="#_">
+                            <img class="object-cover w-full h-32 sm:h-48" src="https://cdn.devdojo.com/images/march2021/slide-5.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="flex flex-col justify-between flex-1 p-6 bg-white">
+                        <div class="flex-1">
+                            <p class="inline-block py-1 pl-10 pr-4 mb-2 -ml-10 text-xs font-medium leading-5 text-white transform -translate-y-2 bg-indigo-600 rounded" data-primary="indigo-600" data-rounded="rounded">
+                                <a href="#_" class="hover:underline" rel="category">
+                                    Design
+                                </a>
+                            </p>
+                            <a href="#_" class="block">
+                                <span class="mt-2 text-base font-semibold leading-tight leading-7 text-gray-900 sm:text-xl">
+                                    How to build the perfect landing page.
+                                </span>
+                                <span class="block mt-3 text-xs leading-6 text-gray-500 sm:text-sm">
+                                    If you want to learn the tips and tricks to building the perfect landing page you've got to follow these proven...
+                                </span>
+                            </a>
+                        </div>
+                        <div class="items-center hidden mt-6 sm:flex">
+                            <div class="relative">
+                                <p class="text-xs font-medium leading-5 text-gray-500">
+                                    <a href="#_" class="hover:underline">John Doe</a>
+                                    <span class="mx-1">·</span><time class="ml-1">January 21, 2022</time>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- story 6 -->
+                <div class="flex flex-col flex-shrink-0 w-1/2 overflow-hidden rounded-lg shadow-lg" data-rounded="rounded-lg" data-rounded-max="rounded-full">
+                    <div class="flex-shrink-0">
+                        <a href="#_">
+                            <img class="object-cover w-full h-32 sm:h-48" src="https://cdn.devdojo.com/images/march2021/slide-6.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="flex flex-col justify-between flex-1 p-6 bg-white">
+                        <div class="flex-1">
+                            <p class="inline-block py-1 pl-10 pr-4 mb-2 -ml-10 text-xs font-medium leading-5 text-white transform -translate-y-2 bg-indigo-600 rounded" data-primary="indigo-600" data-rounded="rounded">
+                                <a href="#_" class="hover:underline" rel="category">
+                                    Design
+                                </a>
+                            </p>
+                            <a href="#_" class="block">
+                                <span class="mt-2 text-base font-semibold leading-tight leading-7 text-gray-900 sm:text-xl">
+                                    How to build the perfect landing page.
+                                </span>
+                                <span class="block mt-3 text-xs leading-6 text-gray-500 sm:text-sm">
+                                    If you want to learn the tips and tricks to building the perfect landing page you've got to follow these proven...
+                                </span>
+                            </a>
+                        </div>
+                        <div class="items-center hidden mt-6 sm:flex">
+                            <div class="relative">
+                                <p class="text-xs font-medium leading-5 text-gray-500">
+                                    <a href="#_" class="hover:underline">John Doe</a>
+                                    <span class="mx-1">·</span><time class="ml-1">January 21, 2022</time>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End slide page 3 -->
+
+        </div>
+    </div>
+</section><section class="relative bg-white h-full py-10 xl:py-20 px-10">
+    <div class="max-w-5xl px-10 md:px-20 lg:px-10 bg-gray-100 pt-5 rounded-3xl mx-auto">
+        <div class="flex flex-wrap items-center">
+            <div class="relative w-full lg:w-5/12 px-4 order-last lg:order-first">
+                <img class="mx-auto mt-10 lg:mt-0 h-full w-full lg:max-w-none md:max-w-md max-w-sm lg:-ml-20 object-cover" alt="testimonial image" src="https://cdn.devdojo.com/images/february2022/person-testimonial.png">
+            </div>
+            <div class="w-full lg:w-7/12 px-4 pb-6 pt-10 md:pt-20 lg:pt-0">
+                <div class="max-w-xl lg:ml-auto">
+                    <svg class="w-12 h-12 mb-6 fill-current text-red-400" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26 29.45C26 19.3858 33.4577 8.86747 45.2297 6.16443C45.6793 6.0612 46.1364 6.29467 46.3301 6.71327L47.5161 9.27572C47.7602 9.80299 47.5031 10.4238 46.9877 10.692C43.3044 12.608 40.1644 17.1966 39.3647 20.8059C39.2493 21.3268 39.6241 21.8042 40.1413 21.9351C44.6581 23.0784 48 27.1681 48 32.042C48 38.406 42.832 42 37.602 42C31.572 42 26 37.39 26 29.45ZM0 29.45C0 19.3858 7.45772 8.86747 19.2297 6.16443C19.6793 6.0612 20.1364 6.29467 20.3301 6.71327L21.5161 9.27572C21.7602 9.80299 21.5031 10.4238 20.9877 10.692C17.3044 12.608 14.1644 17.1966 13.3647 20.8059C13.2493 21.3268 13.6241 21.8042 14.1413 21.9351C18.6581 23.0784 22 27.1681 22 32.042C22 38.406 16.832 42 11.602 42C5.572 42 0 37.39 0 29.45Z"></path></svg>
+                    <h2 class="mb-7 text-3xl md:text-4xl font-bold leading-tight">One of the Best Solutions for Getting Organized</h2>
+                    <p class="mb-10 text-lg md:text-xl text-gray-500">I needed a solution for managing time and getting organized. This is one of the best solutions for getting organized and managing my time.</p>
+                    <p class="mb-3 text-2xl font-semibold">Jennifer Smith</p>
+                    <p class="text-gray-500">CEO &amp; Founder</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><section class="relative flex items-center justify-center w-full h-full bg-white">
+    <div class="relative hidden w-1/4 h-full bg-center bg-cover lg:block"></div>
+    <div class="absolute top-0 left-0 hidden w-1/4 h-full bg-center bg-cover lg:block" style="background-image:url('https://cdn.devdojo.com/images/november2021/scenic.jpeg')">
+        <div class="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent to-gray-900"></div>
+        <a href="#_" class="absolute bottom-0 left-0 flex items-center w-auto m-5 font-medium text-white group">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            Return Home
+            <span class="absolute overflow-hidden left-0 block pl-5 h-0.5 w-full bottom-0 -mb-0.5">
+                <span class="absolute rounded-full bg-white duration-200 ease-in-out transition-all h-0.5 w-0 group-hover:w-full"></span>
+            </span>
+        </a>
+    </div>
+
+    <div class="flex items-center justify-center w-full h-full px-8 py-32 lg:w-3/4 sm:px-0">
+        <div class="w-full max-w-sm mx-auto">
+            <div class="relative flex items-center mb-8">
+                <a href="#_" class="inline-block px-3 p-1.5 font-sans text-left text-white bg-gray-800 rounded no-underline cursor-pointer focus:no-underline">
+                    <span class="text-lg font-bold leading-tight">tails</span>
+                </a>
+            </div>
+            <h1 class="text-gray-600 font-medium text-2xl border-b border-gray-300 pb-2.5 mb-2.5">Sign Into Your User Account</h1>
+            <p class="mb-10 text-gray-500">Need an account? <a href="#_" class="ml-1 font-medium text-blue-600">Create one here</a></p>
+
+            <div class="relative flex flex-col-reverse mb-5">
+                <input type="text" name="email" class="border-gray-300 focus:border-blue-600 peer border rounded-md px-3.5 py-3 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-blue-600 focus:ring-opacity-0 caret-blue-600" placeholder="Email Address" />
+                <label for="email" class="mb-2 font-medium text-gray-500 peer-focus:text-blue-600">Email</label>
+            </div>
+
+            <div class="relative flex flex-col-reverse mb-5">
+                <input type="password" name="password" class="peer border-gray-300 focus:border-blue-600 border rounded-md px-3.5 py-3 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-blue-600 focus:ring-opacity-0 caret-blue-600" placeholder="Password" />
+                <label for="password" class="mb-2 font-medium text-gray-500 peer-focus:text-blue-600">Password</label>
+            </div>
+
+            <div class="flex items-center justify-between mb-5">
+                <div class="relative flex items-center space-x-2 text-gray-500">
+                    <input type="checkbox" class="p-2 border border-gray-300 rounded form-checkbox peer focus:border-gray-300 active:border-gray-300 checked:bg-blue-600 checked:border-blue-600" name="remember" />
+                    <span class="block peer-checked:text-gray-700">Keep me logged in</span>
+                </div>
+                <a href="#_" class="ml-2 font-medium text-blue-600">Forgot Password</a>
+            </div>
+
+            <div class="relative flex flex-col">
+                <a href="#_" class="w-full rounded bg-blue-600 hover:opacity-90 text-white py-3.5 px-2 text-center font-medium">Sign in</a>
+                <span class="relative w-full py-4 text-sm font-bold text-center text-gray-600">or</span>
+                <a href="#_" class="w-full flex items-center shadow justify-center rounded bg-white border border-gray-300 text-gray-600 py-3.5 px-2 text-center font-medium">
+                    <svg class="w-5 h-5" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" fill="none"><path d="M23.998 13.278a10.881 10.881 0 00-.252-2.52H12.414v4.576h6.653a6.034 6.034 0 01-2.466 4l-.024.15 3.582 2.836.248.025c2.275-2.149 3.591-5.31 3.591-9.067" fill="#4285F4" /><path d="M12.585 24.828c3.303 0 6.078-1.1 8.105-2.998l-3.86-3.027a7.174 7.174 0 01-4.24 1.238c-3.173-.02-5.978-2.093-6.964-5.144l-.146.014-3.776 2.954-.049.137c2.07 4.19 6.301 6.83 10.93 6.826" fill="#34A853" /><path d="M4.966 14.986a8.672 8.672 0 01-.383-2.542 9.2 9.2 0 01.373-2.541l-.004-.168-3.604-3.114-.118.06a14.114 14.114 0 000 11.526l3.736-3.221" fill="#FBBC05" /><path d="M12.544 4.785a6.662 6.662 0 014.708 1.844l3.438-3.41A11.611 11.611 0 0012.54.002C7.933 0 3.72 2.637 1.655 6.825L5.593 9.93c.992-3.052 3.789-5.127 6.951-5.146" fill="#EB4335" /></g></svg>
+                    <span class="ml-2.5">Sign in with Google</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section><section class="w-full py-16 pb-20 bg-white">
+    <div class="container px-8 mx-auto sm:px-12 lg:px-20">
+        <h1 class="mb-3 text-3xl font-bold leading-tight text-center text-gray-900 md:text-4xl">Trusted by over 850 companies</h1>
+        <p class="text-lg text-center text-gray-600 ">We've been trusted and used by some of the top companies in the industry.</p>
+        <div class="grid grid-cols-2 gap-16 py-16 mb-0 text-center lg:grid-cols-6">
+            <div class="flex items-center justify-center">
+                <img src="https://cdn.devdojo.com/tails/images/nintendo-logo.svg" alt="Ninendo Logo" class="block object-contain h-8 lg:h-10" />
+            </div>
+            <div class="flex items-center justify-center">
+                <img src="https://cdn.devdojo.com/tails/images/google-icon.svg" alt="Google Logo" class="block object-contain h-12" />
+            </div>
+            <div class="flex items-center justify-center">
+                <img src="https://cdn.devdojo.com/tails/images/reddit.svg" alt="Reddit Logo" class="block object-contain h-12 lg:h-16" />
+            </div>
+            <div class="flex items-center justify-center">
+                <img src="https://cdn.devdojo.com/tails/images/youtube-logo.svg" alt="Youtube Logo" class="block object-contain h-9 lg:h-16" />
+            </div>
+            <div class="flex items-center justify-center">
+                <img src="https://cdn.devdojo.com/tails/images/slack-icon.svg" alt="Slack Logo" class="block object-contain h-12" />
+            </div>
+            <div class="flex items-center justify-center">
+                <img src="https://cdn.devdojo.com/tails/images/amazon.svg" alt="Amazon Logo" class="block object-contain h-10 lg:h-16" />
+            </div>
+        </div>
+        <div class="flex items-center justify-center w-full ml-2">
+            <a href="#" class="flex items-center">
+                <span class="border-b-2 border-black">Visit Our Testimonials</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" class="h-4 ml-1"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+</html>
